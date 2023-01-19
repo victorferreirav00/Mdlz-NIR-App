@@ -1,0 +1,51 @@
+html, body {
+    margin:0;
+    padding:0;
+}
+
+body{
+    height:100vh;
+    width:100vw;
+}
+
+* {
+    box-sizing: border-box;
+}
+#container{
+    height:100vh;
+    width:100vw;
+}
+
+#sidebar-column{
+    background-color: darkgrey;
+    font-family: sans-serif;
+    font-style: bold;
+    justify-content: center;
+    height:150vh;
+    margin:0;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    align-items:center;
+    text-align:center;
+    text-justify: center;
+    border-radius: 5px;
+    border-style:solid; 
+}
+
+h3{
+    text-align: center;
+}
+
+#graph-options-container{
+    width:80%;
+    text-align: center;
+    margin: 10px;
+}
+
+#title-input{
+    width:100%;
+    text-align: center;
+    border-radius: 5px;
+    border-style: double;
+    margin: 10px;
+}
