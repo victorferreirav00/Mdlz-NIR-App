@@ -9,3 +9,4 @@ scipy==1.7.3
 gunicorn
 dash-tools
 base64==3.4
+io
