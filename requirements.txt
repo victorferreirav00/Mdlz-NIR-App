@@ -8,3 +8,6 @@ plotly==5.10.0
 scipy==1.7.3
 gunicorn
 dash-tools
+base64
+openpyxl
+io
