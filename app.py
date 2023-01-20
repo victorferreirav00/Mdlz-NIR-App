@@ -143,14 +143,20 @@ def parse_contents(contents, filename, date):
 
     decoded = base64.b64decode(content_string)
     try:
-        if 'xls' in filename:
+        if 'csv' in filename:
+            # Assume that the user uploaded a CSV file
+            df = pd.read_csv(
+                io.StringIO(decoded.decode('utf-8')))
+            return df
+        elif 'xls' in filename:
+            # Assume that the user uploaded an excel file
             df = pd.read_excel(io.BytesIO(decoded))
+            return df
     except Exception as e:
         print(e)
         return html.Div([
             'There was an error processing this file.'
         ])
-    return df
 
 
 def second_derivative(dataframe, x):
@@ -186,9 +192,10 @@ def download_dataframe(list_of_contents, list_of_names, list_of_dates, n_clicks)
                State('upload-data', 'filename'),
                State('upload-data', 'last_modified'))
 def generate_dropdown(list_of_contents, list_of_names, list_of_dates):
-    df = [
-        parse_contents(c, n, d) for c, n, d in
-        zip(list_of_contents, list_of_names, list_of_dates)]
+    if list_of_contents is not None:
+        df = [
+            parse_contents(c, n, d) for c, n, d in
+            zip(list_of_contents, list_of_names, list_of_dates)]
     name_list = []
     for columns in df[0].columns:
         name_list.append(columns)
