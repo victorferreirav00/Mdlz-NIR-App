@@ -38,7 +38,7 @@ Jinja2==3.1.2
 joblib==1.2.0
 kiwisolver==1.4.4
 MarkupSafe==2.1.1
-matplotlib==3.6.2
+matplotlib==3.5.3
 mpmath==1.2.1
 nodeenv==1.7.0
 numpy==1.23.4
