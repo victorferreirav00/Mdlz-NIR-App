@@ -41,7 +41,7 @@ MarkupSafe==2.1.1
 matplotlib==3.5.3
 mpmath==1.2.1
 nodeenv==1.7.0
-numpy==1.23.4
+numpy==1.21.6
 openpyxl==3.0.10
 packaging==21.0
 pandas==1.5.1
