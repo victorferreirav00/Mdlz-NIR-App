@@ -68,7 +68,7 @@ ruamel.yaml==0.17.21
 scikit-learn==1.0.2
 scipy==1.7.3
 six==1.16.0
-sympy==1.11.1
+sympy==1.10.1
 tenacity==8.1.0
 termcolor==1.1.0
 threadpoolctl==3.1.0
